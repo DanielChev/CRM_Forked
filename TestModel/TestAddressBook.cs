@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using static CRM.AddressBook;
 
 namespace CRM
 {
@@ -96,7 +97,7 @@ namespace CRM
             _addressBook.AddContacts(new List<Contact> { gauthier, astier });
 
             //when
-            _addresseBook.Remove(gauthier);
+            _addressBook.Remove(gauthier);
 
             //then
             Assert.IsTrue(_addressBook.DoesExist(astier));
