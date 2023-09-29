@@ -98,6 +98,7 @@ namespace CRM
             }
             set
             {
+                //TODO Fix this bug
                 _name = value;
             }
         }
@@ -113,6 +114,7 @@ namespace CRM
             }
             set
             {
+                //TODO Fix this bug
                 Email = value;
             }
         }
