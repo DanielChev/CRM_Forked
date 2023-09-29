@@ -20,7 +20,7 @@ namespace CRM
                 }
                  else
                 {
-                    _contacts.AddRange(contactToAdd);
+                    _contacts.Add(contact);
                 }
             }
 
