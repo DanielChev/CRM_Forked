@@ -33,7 +33,14 @@ namespace CRM
 
         public void Remove(Contact contact)
         {
-            _contacts.Remove(contact);
+            if (DoesExist(contact))
+            {
+                _contacts.Remove(contact);
+            }
+            else
+            {
+                throw new RemoveFailedException();   
+            }
         }
 
         public List<Contact> Contacts
@@ -44,7 +51,9 @@ namespace CRM
             }
         }
 
-        public class ContactAlreadyExist : Exception { };
+        public class AdressBookException : Exception { };
+        public class ContactAlreadyExist : AdressBookException { };
+        public class RemoveFailedException : AdressBookException { };
         #endregion public methods
     }
 }
